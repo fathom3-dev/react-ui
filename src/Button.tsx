@@ -3,8 +3,8 @@ import { ThemeContext } from './context/Theme';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
-  mode: 'primary' | 'outline' | 'link'
-  size: 'regular' | 'small' | 'large'
+  mode: 'primary' | 'outline' | 'link';
+  size: 'regular' | 'small' | 'large';
 }
 
 export const Button = ({ disabled, title, mode='primary', size='regular' ,...rest }: ButtonProps) => {
