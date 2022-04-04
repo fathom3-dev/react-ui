@@ -3,7 +3,7 @@ import defaultTheme from '../themes/default'
 
 interface ThemeContextInterface {
   theme: any
-  mode?: any
+  mode?: string | null
   toggleMode?: any
 }
 
