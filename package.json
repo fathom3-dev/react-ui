@@ -1,4 +1,6 @@
 {
+  "name": "@f3d/react-ui",
+  "author": "DonsWayo",
   "version": "0.0.1",
   "license": "MIT",
   "main": "dist/index.js",
@@ -37,8 +39,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@f3d/react-ui",
-  "author": "DonsWayo",
   "module": "dist/@f3d/react-ui.esm.js",
   "size-limit": [
     {
