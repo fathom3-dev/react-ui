@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Switch } from '@headlessui/react';
-import { ThemeContext } from './context/Theme';
+import { ThemeContext } from './context/ThemeContext';
 
 export interface ToggleSwitchProps {
   enabled: boolean;

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { ThemeContext } from './context/Theme'
+import { ThemeContext } from './context/ThemeContext'
 import classNames from 'classnames'
 
 interface Props extends React.HTMLAttributes<HTMLTableSectionElement> {}

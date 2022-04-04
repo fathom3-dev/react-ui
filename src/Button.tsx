@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from './context/Theme';
+import { ThemeContext } from './context/ThemeContext';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
