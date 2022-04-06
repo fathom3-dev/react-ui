@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
+import classNames from 'classnames'
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
@@ -8,12 +9,14 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 export const Button = ({ disabled, title, mode='primary', size='regular' ,...rest }: ButtonProps) => {
+  const { className } = rest;
+
   const {
     theme: { button },
   } = useContext(ThemeContext)
   return(
     <button
-    className={`${button.base} ${button[mode].base} ${button[mode].active} ${button[mode].disabled} ${button.size[size]}`}
+    className={classNames(`${button.base} ${button[mode].base} ${button[mode].active} ${button[mode].disabled} ${button.size[size]}`, className)}
     disabled={disabled}
     {...rest}
   >

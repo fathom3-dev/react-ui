@@ -1,5 +1,5 @@
 import React from 'react'
-import defaultTheme from '../themes/default'
+import {theme} from '../themes/default'
 
 interface ThemeContextInterface {
   theme: any
@@ -7,7 +7,7 @@ interface ThemeContextInterface {
   toggleMode?: any
 }
 
-export const ThemeContext = React.createContext<ThemeContextInterface>({ theme: defaultTheme })
+export const ThemeContext = React.createContext<ThemeContextInterface>({ theme: theme })
 
 interface ThemeProviderProps {
   children: React.ReactNode

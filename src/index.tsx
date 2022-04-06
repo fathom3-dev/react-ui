@@ -12,3 +12,4 @@ export * from './TableHeader';
 export * from './TableRow';
 export * from './F3DUI'
 export { ThemeContext as F3DUIContext } from './context/ThemeContext'
+export { theme as Theme } from './themes/default';

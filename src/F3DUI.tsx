@@ -1,50 +1,26 @@
-import React, { useLayoutEffect, useMemo } from 'react'
+import React, { useMemo } from 'react'
 import { ThemeContext } from './context/ThemeContext';
-import useDarkMode from './hooks/useDarkMode'
-import defaultTheme from './themes/default'
+import {theme} from './themes/default'
 import { mergeDeep } from './utils/mergeDeep';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode
-  /**
-   * Defines the styles used throughout the library
-   */
+  children: React.ReactChildren
   theme?: object
-  /**
-   * Defines dark mode as the default theme
-   */
   dark?: boolean
-  /**
-   * Allows the change of theme, reading user's preferences and saving them
-   */
   usePreferences?: boolean
 }
 
 export const F3DUI: React.FC<Props> = ({
   children,
-  theme: customTheme,
-  dark,
-  usePreferences = false,
+  theme: customTheme
 }) => {
-  const mergedTheme = mergeDeep(defaultTheme, customTheme)
-  const [mode, setMode, toggleMode] = useDarkMode(usePreferences)
-
-  useLayoutEffect(() => {
-    if (dark) {
-      if (setMode != null) {
-        setMode('dark')
-      }
-      document.documentElement.classList.add(`dark`)
-    }
-  }, [dark])
+  const mergedTheme = mergeDeep(theme, customTheme)
 
   const value = useMemo(
     () => ({
-      theme: mergedTheme,
-      mode,
-      toggleMode,
+      theme: mergedTheme
     }),
-    [mode]
+    [theme]
   )
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>

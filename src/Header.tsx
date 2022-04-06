@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { ThemeContext } from './context/ThemeContext'
 
 export interface HeaderProps {
-    children: React.ReactChildren
+    children: React.ReactNode
 }
 
 export const Header = ({ children }: HeaderProps) => {

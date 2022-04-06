@@ -1,4 +1,4 @@
-export default {
+export const theme =  {
   // Alert
   alert: {
     base: 'p-4 pl-12 relative rounded-lg leading-5',
@@ -215,7 +215,7 @@ export default {
     base: 'z-30 flex-shrink-0 hidden shadow-sm w-64 overflow-y-auto bg-white lg:block'
   },
   header: {
-    base: 'z-40 py-4 bg-white shadow-sm',
+    base: 'z-40 py-4 bg-white shadow-lg',
     container: 'container flex items-center justify-between h-full px-6 mx-auto text-green-500 dark:text-green-500'
   },
   toggleSwitch: {
